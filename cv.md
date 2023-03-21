@@ -41,7 +41,6 @@ function isPrime(num) {
 
 CV
 Plants
-Momentum
 
 ## Education
 
