@@ -92,7 +92,8 @@ addEl('code', addEl('pre', sections[3], 'code-example-wrapper'), 'code-example',
     }
   }
   return true;
-}`);
+}`,
+);
 
 // section projects
 
@@ -100,15 +101,30 @@ addEl('code', addEl('pre', sections[3], 'code-example-wrapper'), 'code-example',
 
 addEl('h2', sections[5], 'education heading', 'Education');
 addEl('div', sections[5], 'division');
-const educationUL = addEl(
-  'ul',
-  sections[5],
-  'education-info',
-);
+const educationUL = addEl('ul', sections[5], 'education-info');
 
-let educationList = ['University - Kyiv Medical University, Medical faculty (in progress)','QATestLab Course "The Fundamentals of Software Testing" ','RS Schools Course «JavaScript/Front-end. Stage 0» ', 'RS Schools Course «JavaScript/Front-end. Stage 1»']
-educationList = educationList.map(el => addEl('li', educationUL, 'education-list-item', `${el}`))
-const QATestLabCertificate = addEl('a', educationList[1], 'certificate link', '(certificate)')
-const RSCertificateLink = addEl('a', educationList[2], 'certificate link', '(certificate)')
-RSCertificateLink.href = 'https://app.rs.school/certificate/8vomotnk'
-QATestLabCertificate.href = 'https://i.imgur.com/yvVuOAa.jpeg'
+let educationList = [
+  'University - Kyiv Medical University, Medical faculty (in progress)',
+  'QATestLab Course "The Fundamentals of Software Testing" ',
+  'RS Schools Course «JavaScript/Front-end. Stage 0» ',
+  'RS Schools Course «JavaScript/Front-end. Stage 1»',
+];
+educationList = educationList.map((el) => addEl('li', educationUL, 'education-list-item', `${el}`));
+const QATestLabCertificate = addEl('a', educationList[1], 'certificate link', '(certificate)');
+const RSCertificateLink = addEl('a', educationList[2], 'certificate link', '(certificate)');
+RSCertificateLink.href = 'https://app.rs.school/certificate/8vomotnk';
+QATestLabCertificate.href = 'https://i.imgur.com/yvVuOAa.jpeg';
+
+// section languages
+
+addEl('h2', sections[6], 'languages heading', 'Languages');
+addEl('div', sections[6], 'division');
+const languagesUL = addEl('ul', sections[6], 'languages-info');
+
+let languagesList = [
+  'Ukrainian - native speaker',
+  'Russian - fluent',
+  'English - intermediate',
+  'Polish - basic',
+];
+languagesList = languagesList.map((el) => addEl('li', languagesUL, 'education-list-item', `${el}`));
