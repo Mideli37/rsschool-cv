@@ -21,7 +21,7 @@ let navItems = ['Contacts', 'About Me', 'Skills', 'Code', 'Education', 'Experien
 navItems = navItems.map((textContent) => addEl('li', navUl, 'nav-item', textContent));
 //const sectionContacts = addEl('section', main, 'section contacts')
 //const contactsHeader = addEl('h1', sectionContacts, 'name', 'Muzipova Anastasiia')
-let sections = ['contacts', 'about-me', 'skills', 'code', 'education', 'experience'];
+let sections = ['contacts', 'about-me', 'skills', 'code', 'education', 'experience', 'languages'];
 sections = sections.map((section) => addEl('section', main, `section ${section}`));
 sections[0].classList.add('top-section');
 const photoWrapper = addEl('div', sections[0], 'photo-wrapper');
@@ -69,15 +69,29 @@ let skills = {
 
 addEl('h2', sections[2], 'skills heading', 'Skills');
 addEl('div', sections[2], 'division');
-const skillWrapper = addEl(
-  'ul',
-  sections[2],
-  'skills-info'
-);
+const skillWrapper = addEl('ul', sections[2], 'skills-info');
 
 for (let el in skills) {
-  const element = addEl('li', skillWrapper, 'skills-list-item', el)
-  const icon = addEl('img', element, 'skill-icon')
-  icon.alt = `${el} icon`
-  icon.src = skills[el]
+  const element = addEl('li', skillWrapper, 'skills-list-item', el);
+  const icon = addEl('img', element, 'skill-icon');
+  icon.alt = `${el} icon`;
+  icon.src = skills[el];
 }
+
+// section code
+
+addEl('h2', sections[3], 'code heading', 'Code Example');
+addEl('div', sections[3], 'division');
+addEl('code', addEl('pre', sections[3], 'code-example-wrapper'), 'code-example', `function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.floor(Math.sqrt(num)); i += 1) {
+    if (num % i == 0 && i != num) {
+      return false;
+    }
+  }
+  return true;
+}`);
+
+

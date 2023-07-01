@@ -169,3 +169,9 @@ body {
   height: 50px;
   width: fit-content;
 }
+
+.code-example-wrapper {
+  width: 100%;
+  background-color:#faf9ff;
+  overflow-x: auto;
+}
