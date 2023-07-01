@@ -87,7 +87,7 @@ addEl('code', addEl('pre', sections[3], 'code-example-wrapper'), 'code-example',
     return false;
   }
   for (let i = 2; i <= Math.floor(Math.sqrt(num)); i += 1) {
-    if (num % i == 0 && i != num) {
+    if (num % i === 0 && i !== num) {
       return false;
     }
   }
