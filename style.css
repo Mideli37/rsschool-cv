@@ -9,6 +9,7 @@ body {
   justify-content: space-between;
   font-family: 'Roboto Condensed', sans-serif;
   color: #324f59;
+  font-size: 30px;
 }
 
 .link {
@@ -114,7 +115,7 @@ body {
 .contacts .name {
   color: #324f59;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .photo-wrapper {
@@ -136,5 +137,6 @@ body {
 }
 
 .contacts-heading {
+  font-size: 40px;
   font-family: 'Montserrat', sans-serif;
 }
