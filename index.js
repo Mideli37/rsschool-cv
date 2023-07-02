@@ -114,6 +114,8 @@ const QATestLabCertificate = addEl('a', educationList[1], 'certificate link', '(
 const RSCertificateLink = addEl('a', educationList[2], 'certificate link', '(certificate)');
 RSCertificateLink.href = 'https://app.rs.school/certificate/8vomotnk';
 QATestLabCertificate.href = 'https://i.imgur.com/yvVuOAa.jpeg';
+RSCertificateLink.target = '_blank'
+QATestLabCertificate.target = '_blank'
 
 // section languages
 
@@ -128,3 +130,22 @@ let languagesList = [
   'Polish - basic',
 ];
 languagesList = languagesList.map((el) => addEl('li', languagesUL, 'education-list-item', `${el}`));
+
+// footer
+const githubWrapper = addEl('div', footer, 'github-wrapper')
+const githubLink = addEl('a', githubWrapper, 'github-link')
+githubLink.href = 'https://github.com/Mideli37'
+githubLink.target = '_blank'
+githubIcon = addEl('img', githubLink, 'github-icon')
+githubIcon.alt = 'GitHub Icon'
+githubIcon.src = './assets/icons/Octicons-mark-github.svg'
+
+addEl('span', footer, 'year', '2023')
+
+const rsWrapper = addEl('div', footer, 'rs-wrapper')
+const rsLink = addEl('a', rsWrapper, 'rs-link')
+rsLink.href = 'https://rs.school/js/'
+rsLink.target = '_blank'
+const RSIcon = addEl('img', rsLink, 'rs-icon')
+RSIcon.alt = 'RSSchool Icon'
+RSIcon.src = './assets/icons/rs_school_js.svg'
