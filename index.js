@@ -17,12 +17,28 @@ const main = addEl('main', document.body, 'main');
 const footer = addEl('footer', document.body, 'footer');
 const nav = addEl('nav', header, 'nav');
 const navUl = addEl('ul', nav, 'navUl');
-let navItems = ['Contacts', 'About Me', 'Skills', 'Code', 'Education', 'Experience'];
-navItems = navItems.map((textContent) => addEl('li', navUl, 'nav-item', textContent));
+const sectionNames = [
+  'contacts',
+  'about-me',
+  'skills',
+  'code',
+  'experience',
+  'education',
+  'languages',
+];
+let navItems = ['Contacts', 'About Me', 'Skills', 'Code', 'Experience', 'Education'];
+navItems = navItems.map((textContent, index) => {
+  const newNavItem = addEl('li', navUl, 'nav-item');
+  addEl('a', newNavItem, 'nav-link', textContent).href = `#${sectionNames[index]}`;
+  return;
+});
 //const sectionContacts = addEl('section', main, 'section contacts')
 //const contactsHeader = addEl('h1', sectionContacts, 'name', 'Muzipova Anastasiia')
-let sections = ['contacts', 'about-me', 'skills', 'code', 'education', 'experience', 'languages'];
-sections = sections.map((section) => addEl('section', main, `section ${section}`));
+const sections = sectionNames.map((section) => {
+  const newSection = addEl('section', main, `section ${section}`);
+  newSection.id = section;
+  return newSection;
+});
 sections[0].classList.add('top-section');
 const photoWrapper = addEl('div', sections[0], 'photo-wrapper');
 const photo = addEl('img', photoWrapper, 'photo');
@@ -35,15 +51,15 @@ addEl('h2', contactInfo, 'contacts heading', 'Contacts');
 const contactsUL = addEl('ul', contactInfo, 'contacts-ul');
 let contactLI = ['Location: Odesa, Ukraine', 'Email: ', 'Discord: ', 'Github: '];
 contactLI = contactLI.map((text) => addEl('li', contactsUL, 'contacts-list-item', text));
-const email = addEl('a', contactLI[1], 'link', 'muzipovanastia@gmail.com')
+const email = addEl('a', contactLI[1], 'link', 'muzipovanastia@gmail.com');
 email.href = 'mailto:muzipovanastia@gmail.com';
-email.target = '_blank'
-const discord = addEl('a', contactLI[2], 'link', 'Mideli#7998')
+email.target = '_blank';
+const discord = addEl('a', contactLI[2], 'link', 'Mideli#7998');
 discord.href = 'https://discordapp.com/users/408488991235637248/';
-discord.target = '_blank'
-const githubContact = addEl('a', contactLI[3], 'link', 'Mideli37')
+discord.target = '_blank';
+const githubContact = addEl('a', contactLI[3], 'link', 'Mideli37');
 githubContact.href = 'https://github.com/Mideli37';
-githubContact.target = '_blank'
+githubContact.target = '_blank';
 
 // section about me
 
@@ -86,7 +102,11 @@ for (let el in skills) {
 
 addEl('h2', sections[3], 'code heading', 'Code Example');
 addEl('div', sections[3], 'division');
-addEl('code', addEl('pre', sections[3], 'code-example-wrapper'), 'code-example', `function isPrime(num) {
+addEl(
+  'code',
+  addEl('pre', sections[3], 'code-example-wrapper'),
+  'code-example',
+  `function isPrime(num) {
   if (num <= 1) {
     return false;
   }
@@ -118,8 +138,8 @@ const QATestLabCertificate = addEl('a', educationList[1], 'certificate link', '(
 const RSCertificateLink = addEl('a', educationList[2], 'certificate link', '(certificate)');
 RSCertificateLink.href = 'https://app.rs.school/certificate/8vomotnk';
 QATestLabCertificate.href = 'https://i.imgur.com/yvVuOAa.jpeg';
-RSCertificateLink.target = '_blank'
-QATestLabCertificate.target = '_blank'
+RSCertificateLink.target = '_blank';
+QATestLabCertificate.target = '_blank';
 
 // section languages
 
@@ -136,20 +156,20 @@ let languagesList = [
 languagesList = languagesList.map((el) => addEl('li', languagesUL, 'education-list-item', `${el}`));
 
 // footer
-const githubWrapper = addEl('div', footer, 'github-wrapper')
-const githubLink = addEl('a', githubWrapper, 'github-link')
-githubLink.href = 'https://github.com/Mideli37'
-githubLink.target = '_blank'
-githubIcon = addEl('img', githubLink, 'github-icon')
-githubIcon.alt = 'GitHub Icon'
-githubIcon.src = './assets/icons/Octicons-mark-github.svg'
+const githubWrapper = addEl('div', footer, 'github-wrapper');
+const githubLink = addEl('a', githubWrapper, 'github-link');
+githubLink.href = 'https://github.com/Mideli37';
+githubLink.target = '_blank';
+githubIcon = addEl('img', githubLink, 'github-icon');
+githubIcon.alt = 'GitHub Icon';
+githubIcon.src = './assets/icons/Octicons-mark-github.svg';
 
-addEl('span', footer, 'year', '2023')
+addEl('span', footer, 'year', '2023');
 
-const rsWrapper = addEl('div', footer, 'rs-wrapper')
-const rsLink = addEl('a', rsWrapper, 'rs-link')
-rsLink.href = 'https://rs.school/js/'
-rsLink.target = '_blank'
-const RSIcon = addEl('img', rsLink, 'rs-icon')
-RSIcon.alt = 'RSSchool Icon'
-RSIcon.src = './assets/icons/rs_school_js.svg'
+const rsWrapper = addEl('div', footer, 'rs-wrapper');
+const rsLink = addEl('a', rsWrapper, 'rs-link');
+rsLink.href = 'https://rs.school/js/';
+rsLink.target = '_blank';
+const RSIcon = addEl('img', rsLink, 'rs-icon');
+RSIcon.alt = 'RSSchool Icon';
+RSIcon.src = './assets/icons/rs_school_js.svg';
