@@ -35,11 +35,15 @@ addEl('h2', contactInfo, 'contacts heading', 'Contacts');
 const contactsUL = addEl('ul', contactInfo, 'contacts-ul');
 let contactLI = ['Location: Odesa, Ukraine', 'Email: ', 'Discord: ', 'Github: '];
 contactLI = contactLI.map((text) => addEl('li', contactsUL, 'contacts-list-item', text));
-addEl('a', contactLI[1], 'link', 'muzipovanastia@gmail.com').href =
-  'mailto:muzipovanastia@gmail.com';
-addEl('a', contactLI[2], 'link', 'Mideli#7998').href =
-  'https://discordapp.com/users/408488991235637248/';
-addEl('a', contactLI[3], 'link', 'Mideli37').href = 'https://github.com/Mideli37';
+const email = addEl('a', contactLI[1], 'link', 'muzipovanastia@gmail.com')
+email.href = 'mailto:muzipovanastia@gmail.com';
+email.target = '_blank'
+const discord = addEl('a', contactLI[2], 'link', 'Mideli#7998')
+discord.href = 'https://discordapp.com/users/408488991235637248/';
+discord.target = '_blank'
+const githubContact = addEl('a', contactLI[3], 'link', 'Mideli37')
+githubContact.href = 'https://github.com/Mideli37';
+githubContact.target = '_blank'
 
 // section about me
 

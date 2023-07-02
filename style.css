@@ -15,6 +15,7 @@ body {
 .link {
   text-decoration: none;
   color: unset;
+  color: #851855;
 }
 
 .link:hover {
