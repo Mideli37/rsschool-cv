@@ -72,8 +72,8 @@ body {
   padding: 20px 30px;
 }
 
-.nav-link:hover{
-  color: #851855;;
+.nav-link:hover {
+  color: #851855;
 }
 
 .nav-item:hover,
@@ -84,7 +84,6 @@ body {
 
 .section {
   margin-top: 40px;
-  flex-shrink: 0;
   width: 1300px;
   max-width: 90%;
   border-radius: 5px;
@@ -159,7 +158,7 @@ body {
 
 .division {
   width: 100%;
-  border: #324f59 1px solid ;
+  border: #324f59 1px solid;
 }
 
 .skills-info {
@@ -187,7 +186,7 @@ body {
 
 .code-example-wrapper {
   width: 100%;
-  background-color:#faf9ff;
+  background-color: #faf9ff;
   overflow-x: auto;
 }
 
@@ -196,7 +195,7 @@ body {
   background-color: #fbd3d1;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center
+  align-items: center;
 }
 
 .github-wrapper,
@@ -223,8 +222,8 @@ body {
 .project-link {
   text-decoration: none;
   color: #851855;
-  display: flex; 
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   transition: all 300ms;
 }
@@ -241,5 +240,71 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  
+}
+
+@media (width < 1010px) {
+  .navUl {
+   flex-wrap: wrap;
+}
+
+.section {
+  max-width: 80%;
+}
+.top-section {
+  flex-direction: column;
+}
+
+.photo-wrapper {
+  max-width: 50%;
+}
+
+.info-wrapper {
+  max-width: 80%;
+}
+
+.name, .contacts.heading, .profession {
+  text-align: center;
+}
+
+.project-item {
+  width: 75%;
+}
+
+.github-icon, .rs-icon {
+  height: 50px;
+}
+}
+
+@media (width < 520px) {
+
+  .nav {
+    display: none;
+  }
+
+  .header{
+    height: 250px;
+  }
+  body {
+    font-size: 16px;
+  }
+  .contacts .name{
+    font-size: 25px;
+  }
+  .contacts-ul {
+    padding-left: 0;
+    font-size: 16px;
+  }
+  .contacts.heading {
+    font-size: 20px;
+}
+  .section {
+    width: 60%;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+  .github-icon, .rs-icon {
+    height: 30px;
+}
 }
