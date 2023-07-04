@@ -32,8 +32,6 @@ navItems = navItems.map((textContent, index) => {
   addEl('a', newNavItem, 'nav-link', textContent).href = `#${sectionNames[index]}`;
   return;
 });
-//const sectionContacts = addEl('section', main, 'section contacts')
-//const contactsHeader = addEl('h1', sectionContacts, 'name', 'Muzipova Anastasiia')
 const sections = sectionNames.map((section) => {
   const newSection = addEl('section', main, `section ${section}`);
   newSection.id = section;
@@ -46,8 +44,9 @@ photo.alt = 'photo';
 photo.src = './assets/photo.jpg';
 const infoWrapper = addEl('div', sections[0], 'info-wrapper');
 addEl('h1', infoWrapper, 'name', 'Muzipova Anastasiia');
+addEl('h2', infoWrapper, 'profession', 'Junior Front-End Developer')
 const contactInfo = addEl('div', infoWrapper, 'contact-info');
-addEl('h2', contactInfo, 'contacts heading', 'Contacts');
+addEl('h3', contactInfo, 'contacts heading', 'Contacts');
 const contactsUL = addEl('ul', contactInfo, 'contacts-ul');
 let contactLI = ['Location: Odesa, Ukraine', 'Email: ', 'Discord: ', 'Github: '];
 contactLI = contactLI.map((text) => addEl('li', contactsUL, 'contacts-list-item', text));

@@ -40,7 +40,6 @@ body {
 
 .nav {
   width: 100%;
-  /* padding: 0px 20px; */
   height: 70px;
   background-color: #fbd3d1;
   position: fixed;
@@ -125,6 +124,14 @@ body {
   color: #324f59;
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
+}
+
+.contacts.heading {
+  font-size: 30px;
+}
+
+.contacts-ul {
+  font-size: 25px;
 }
 
 .photo-wrapper {
