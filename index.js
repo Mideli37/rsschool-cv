@@ -121,6 +121,29 @@ addEl(
 
 // section projects
 
+addEl('h2', sections[4], 'experience heading', 'Experience');
+addEl('div', sections[4], 'division');
+const projectsWrapper = addEl('ul', sections[4], 'project-wrapper');
+const projectsList = {
+  CV: ['https://mideli37.github.io/rsschool-cv0/', './assets/project-ss/cv-2022.png'],
+  Plants: ['https://mideli37.github.io/rs-stage0/plants/', './assets/project-ss/plants.png'],
+  Momentum: ['https://mideli37.github.io/rs-stage0/momentum/', './assets/project-ss/momentum.png'],
+  Shelter: [
+    'https://mideli37.github.io/stage1-tasks-JSFE2023Q1/shelter/index.html',
+    './assets/project-ss/shelter.jpg',
+  ],
+};
+
+Object.entries(projectsList).forEach(([key, value]) => {
+  const listItem = addEl('li', projectsWrapper, `${key.toLowerCase()} project-item`);
+  const link = addEl('a', listItem, `${key.toLowerCase()} project-link`);
+  link.ariaLabel = `${key} project screenshot`;
+  link.href = value[0];
+  const image = addEl('img', link, `${key.toLowerCase()} project-image`);
+  image.src = value[1];
+  addEl('p', link, `${key.toLowerCase()} project-name`, key);
+});
+
 // section education
 
 addEl('h2', sections[5], 'education heading', 'Education');
