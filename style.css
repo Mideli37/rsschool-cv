@@ -215,6 +215,7 @@ body {
 }
 
 .project-item {
+  min-width: 400px;
   width: 45%;
   display: inline-block;
 }
@@ -234,6 +235,7 @@ body {
 }
 
 .project-wrapper {
+  gap: 15px 15px;
   padding-left: 0;
   width: 100%;
   display: flex;
@@ -243,6 +245,7 @@ body {
 }
 
 @media (width < 1010px) {
+
   .navUl {
    flex-wrap: wrap;
 }
@@ -267,6 +270,7 @@ body {
 }
 
 .project-item {
+  min-width: unset;
   width: 75%;
 }
 
