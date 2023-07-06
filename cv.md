@@ -15,7 +15,10 @@
 
 - JS
 - HTML/CSS
+- SCSS/SASS
 - Git, GitHub
+- Webpack
+- Rest API
 - VS Code
 - Python
 - Figma
@@ -48,7 +51,7 @@ Plants
   - Kyiv Medical University, Medical faculty (in progress)
 - Courses
   - RS Schools Course «JavaScript/Front-end. Stage 0» (certificate)
-  - RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
+  - RS Schools Course «JavaScript/Front-end. Stage 1»
 
 ## Languages
 
